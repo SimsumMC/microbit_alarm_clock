@@ -12,7 +12,7 @@ global active
 
 hours = -1
 minutes = -1
-active = True #damit der Wecker nur klingelt, wenn er aktiv ist und nicht einfach wenn die Standartwerte z.b 0 und 0 erfüllt sind
+active = True #damit der Wecker nur klingelt, wenn er aktiv ist und nicht NUR wenn die Standartwerte z.b 0 und 0 erfüllt sind
 
 # Sprüche
 
@@ -138,6 +138,7 @@ def set_hours():
             else:
                 display.scroll(str(hours))
         elif pin_logo.is_touched():
+            hours = -1
             return False
         elif button_b.get_presses():
             return True
@@ -151,12 +152,14 @@ def set_minutes():
             minutes += 1
             if minutes <= 9:
                 display.show(str(minutes))
-            elif minutes >= 60:
+            elif minutes == 60:
                 minutes = 0
                 display.show(str(minutes))
             else:
                 display.scroll(str(minutes))
         elif pin_logo.is_touched():
+            hours = -1
+            minutes = -1
             return False
         elif button_b.get_presses():
             return True
@@ -172,7 +175,10 @@ def set_clock():
             if set_minutes():
                 active = True
                 return
-
+            else:
+              return
+        else:
+          return
 
 def get_time_str():
     time = datetime.datetime.today().strftime("%H:%M")
