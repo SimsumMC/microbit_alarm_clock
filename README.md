@@ -1,6 +1,6 @@
 # Robotik-2021
 
-Einfacher Microbit Wecke / Easy Microbit Alarm Clock
+Einfacher Microbit Wecker / Easy Microbit Alarm Clock
 
 **Funktionen**
 
