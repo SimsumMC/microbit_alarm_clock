@@ -2,7 +2,7 @@
 
 Einfacher Microbit Wecke / Easy Microbit Alarm Clock
 
-**Funtkionen**
+**Funktionen**
 
 + Einstellen des Weckers über Knöpfe und übers Display<br/>
 + Zufälliger Spruch beim Klicken eines Knopfes zum guten Start in den Tag<br/>
