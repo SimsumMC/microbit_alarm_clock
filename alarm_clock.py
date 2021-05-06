@@ -174,13 +174,9 @@ def set_clock():
             else:
               return
         else:
-          return
+          return 
 
-def get_time_str():
-    time = datetime.datetime.today().strftime("%H:%M")
-    return time
-
-
+        
 def alarm():
     Animation = [sun1, sun2, sun3]
     display.show(Animation, delay=500)
@@ -208,7 +204,7 @@ def snooze():
 # Endlosschleife
 
 while True:
-    display.scroll(get_time_str())
+    display.scroll(str(datetime.datetime.today().strftime("%H:%M")))
     if alarm_check():
         alarm()
     elif button_a.get_presses():
