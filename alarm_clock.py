@@ -6,10 +6,6 @@ import music
 
 # Variablen
 
-global hours
-global minutes
-global active
-
 hours = -1
 minutes = -1
 active = True #damit der Wecker nur klingelt, wenn er aktiv ist und nicht NUR wenn die Standartwerte z.b 0 und 0 erfüllt sind
