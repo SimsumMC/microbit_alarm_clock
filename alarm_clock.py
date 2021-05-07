@@ -6,8 +6,8 @@ import music
 
 # Variablen
 
-hours = 19
-minutes = 47
+hours = -1
+minutes = -1
 active = False #damit der Wecker nur klingelt, wenn er aktiv ist und nicht NUR wenn die Standartwerte z.b 0 und 0 erfüllt sind
 
 # Sprüche
@@ -183,7 +183,7 @@ def alarm():
         music.play(music.PRELUDE)
         if button_a.get_presses():
             active = False
-            hours, minutes = 0, 0
+            hours, minutes = -1, -1
             return
         elif pin_logo.is_touched():
             snooze()
