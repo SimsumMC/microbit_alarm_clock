@@ -112,9 +112,9 @@ def showsentence(sentence="undefined"):
     sentencesplit = sentence.split()
     for x in sentencesplit:
         sleep(500)
-        if button_a.get_presses() >= 1:
+        if button_a.get_presses():
             display.clear()
-            break
+            return
         display.scroll(x)
 
 
