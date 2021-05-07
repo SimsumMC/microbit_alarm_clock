@@ -6,9 +6,9 @@ import music
 
 # Variablen
 
-hours = -1
-minutes = -1
-active = True #damit der Wecker nur klingelt, wenn er aktiv ist und nicht NUR wenn die Standartwerte z.b 0 und 0 erfüllt sind
+hours = 19
+minutes = 47
+active = False #damit der Wecker nur klingelt, wenn er aktiv ist und nicht NUR wenn die Standartwerte z.b 0 und 0 erfüllt sind
 
 # Sprüche
 
@@ -159,6 +159,7 @@ def set_minutes():
 
 
 def set_clock():
+    global active
     display.scroll("B zum abbrechen")
     sleep(1000)
     if button_b.get_presses():
@@ -175,12 +176,14 @@ def set_clock():
 
         
 def alarm():
+    global hours, minutes
     Animation = [sun1, sun2, sun3]
     display.show(Animation, delay=500)
     for x in range(10):
         music.play(music.PRELUDE)
         if button_a.get_presses():
             active = False
+            hours, minutes = 0, 0
             return
         elif pin_logo.is_touched():
             snooze()
@@ -195,6 +198,7 @@ def snooze():
         hours += 1
         if hours == 24:
             hours = 0
+            
 
 
 # Endlosschleife
