@@ -95,16 +95,14 @@ def alarm_check():
 
 
 def delete_alarm():
-    global hours
-    global active
-    if active != False:
+    global hours, active
+    if active == True:
         display.scroll("B zum abbrechen")
         sleep(1000)
         if button_b.get_presses():
             return
         else:
-            hours = 0
-            minutes = 0
+            hours, minutes = -1, -1
             active = False
     else:
         display.scroll("Es wurde kein Wecker gestellt")
@@ -132,7 +130,7 @@ def set_hours():
                 hours = 0
                 display.show(str(hours))
             else:
-                display.scroll(str(hours))
+                display.scroll(hours)
         elif pin_logo.is_touched():
             hours = -1
             return False
@@ -152,10 +150,9 @@ def set_minutes():
                 minutes = 0
                 display.show(str(minutes))
             else:
-                display.scroll(str(minutes))
+                display.scroll(minutes)
         elif pin_logo.is_touched():
-            hours = -1
-            minutes = -1
+            hours, minutes = -1, -1
             return False
         elif button_b.get_presses():
             return True
@@ -191,8 +188,7 @@ def alarm():
 
 
 def snooze():
-    global minutes
-    global hours
+    global minutes, hours
     minutes += 10
     if minutes >= 60:
         minutes = minutes - 60
@@ -204,7 +200,7 @@ def snooze():
 # Endlosschleife
 
 while True:
-    display.scroll(str(datetime.datetime.today().strftime("%H:%M")))
+    display.scroll(datetime.datetime.today().strftime("%H:%M"))
     if alarm_check():
         alarm()
     elif button_a.get_presses():
