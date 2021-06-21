@@ -1,6 +1,6 @@
-# Robotik-2021
+# Microbit Wecker | Microbit Clock 
 
-Einfacher Microbit Wecker / Easy Microbit Alarm Clock
+Einfacher Microbit Wecker der mit Python gecodet wurde / Easy Microbit Alarm Clock coded in Python
 
 **Funktionen**
 
