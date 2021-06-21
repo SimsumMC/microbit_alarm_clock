@@ -95,7 +95,7 @@ def alarm_check():
 
 
 def delete_alarm():
-    global hours, active
+    global hours, active, minutes
     if active == True:
         display.scroll("B zum abbrechen")
         sleep(1000)
