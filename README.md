@@ -1,4 +1,4 @@
-# Microbit Wecker | Microbit Clock 
+# Microbit Wecker | Microbit Alarm Clock 
 
 Einfacher Microbit Wecker der mit Python gecodet wurde / Easy Microbit Alarm Clock coded in Python
 
