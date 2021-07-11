@@ -2,7 +2,7 @@
 
 
 
-Einfacher Microbit Wecker der mit Python gecodet wurde / Easy Microbit Alarm Clock coded in Python
+Einfacher Microbit Wecker der mit Python gecodet wurde / Simple Microbit Alarm Clock coded in Python
 
 # English
 
