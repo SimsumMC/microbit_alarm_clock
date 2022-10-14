@@ -1,8 +1,10 @@
 # Microbit Wecker | Microbit Alarm Clock 
 
-
-
 Einfacher Microbit Wecker der mit Python gecodet wurde / Simple Microbit Alarm Clock coded in Python
+
+# Erklärung des Codes [Urpsrünglich für den Lehrer]
+
+https://docs.google.com/document/d/1mltMn2KUOjLaBkivGrGA_zlmuPfgG7tStcmAkmM8F-w/edit?usp=sharing
 
 # English
 
